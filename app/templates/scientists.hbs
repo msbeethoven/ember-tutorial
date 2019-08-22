@@ -1,4 +1,4 @@
-{{outlet}}
+{{!-- {{outlet}}
 
 <h2>List of Scientists</h2>
 
@@ -6,4 +6,18 @@
   {{#each this.model as |scientist|}}
   <li>{{scientist}}</li>
   {{/each}}
+</ul> --}}
+
+{{outlet}}
+
+<PeopleList @title="List of Scientists" @people={{this.model}} />
+
+
+<h2>{{@title}}</h2>
+
+<ul>
+  {{#each @people as |person|}}
+  <li>{{person}}</li>
+  {{/each}}
 </ul>
+
